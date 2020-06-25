@@ -1,0 +1,117 @@
+<div class="card mt-6">
+    <div class="card-body">
+        <form #equipoForm="ngForm" (ngSubmit)=onSubmit(equipoForm)>
+            <!-- Codigo Oculto -->
+            <input type="hidden" name="$key" #$key="ngModel" [(ngModel)]="equipoService.selectEquipo.$key">
+            
+            
+            <div class="form-group">
+                <label for="exampleFormControlInput1">Nombre del equipo</label>
+                <input 
+                type="text"
+                class="form-control"
+                name="name"
+                #name="ngModel"
+                [(ngModel)]="equipoService.selectEquipo.name"
+                placeholder="Nombre"
+                >
+            </div>
+
+            <div class="form-gruop">
+                <label for="exampleFormControlInput1">Color Uniforme</label>
+                <input 
+                type="text"
+                class="form-control"
+                name="color"
+                #color="ngModel"
+                [(ngModel)]="equipoService.selectEquipo.color"
+                placeholder="Color de camiseta"
+                >
+            </div>
+
+            <div class="form-gruop">
+                <label for="exampleFormControlInput1">Numero del equipo</label>
+                <input 
+                type="text"
+                class="form-control"
+                name="numeroEquipo"
+                #numeroEquipo="ngModel"
+                [(ngModel)]="equipoService.selectEquipo.numeroEquipo "
+                placeholder="Numero del equipo"
+                >
+
+            </div>
+
+
+            <div class="form-group">
+                <label for="exampleFormControlInput1">Numero de anotaciones</label>
+                <input 
+                type="text"
+                class="form-control"
+                name="numeroGoles"
+                #numeroGoles="ngModel"
+                [(ngModel)]="equipoService.selectEquipo.numeroGoles"
+                placeholder="Numero de anotraciones"
+                >
+            </div>
+
+            <p class="ayuda">Recuerde llegar todos los campos</p>
+
+            <div class="form-goup">
+                <button class="btn btn-primary" type="submit">
+                    <i class="fas fa-plus-circle"></i>
+                    Agrega El equipo
+                </button>
+
+                <button class="btn btn-secondary" type="reset" (click)="resetForm(equipoForm)">
+                    <i class="fas fa-sync-alt"></i>
+                    Reset
+                </button>
+
+
+            </div>
+
+
+        </form>
+
+    </div>
+
+</div>
+
+<div class="col text-center">
+
+    <button type="button" class="btn btn-primary btn-lg w-50" (click)="prueba()">tabla de posiciones</button>
+    <button type="button" class="btn btn-primary btn-lg w-50" (click)="limpiar()">Limpiar tabla</button>
+
+</div>
+<div class="card">
+    <div class="card-body">
+      <h6 class="text-center">Lista de partidos</h6>
+      <table class="table table-sm table-hover">
+        <tr>
+            <td><strong>Equipo</strong></td>
+            <td><strong>Numero Partido</strong></td>
+            <td><strong># Goles</strong></td>
+            <td><strong>puntos</strong></td>
+          </tr>
+        <tbody>
+            <tr *ngFor="let equipo of equipoList">
+                <td>{{equipo.name}}</td>
+                <td>{{equipo.numeroPartido}}</td>
+                <td>{{equipo.numeroGoles}}</td>
+                <td>{{equipo.puntos}}</td>
+                
+
+            </tr>
+
+        </tbody>
+
+      </table> 
+    
+    </div>
+  </div>
+
+
+
+
+  
