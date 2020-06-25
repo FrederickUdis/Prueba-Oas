@@ -1,0 +1,13 @@
+version: "3.5"
+
+services:
+  client:
+    build: .
+    image: pruebatecnica
+    container_name: pruebatecnica
+    command: sh -c 'npm install; npm install node-sass --save; ng serve  --host 0.0.0.0 --port 5000'  
+    ports:
+      - '5000:5000'
+      - '35730:35730'
+    volumes:
+      - './:/app'
