@@ -1,27 +1,47 @@
-# Partidos
+# Aplicacion Oas Futbol
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.0.
+es una aplicacion capaz de agregar equipos con los siguientes atributos:
+-Nombre del equipo
+-Color de ropa
+-Numero del equipo
+-Numero de goles
+-Puntos ganados
+-Partido Asignado
 
-## Development server
+## Comenzando 🚀
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Para obtener una copia del proyecto solo es necesario clonar al git
 
-## Code scaffolding
+### Pre-requisitos 📋
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Docker
+Angular
+FireBase
 
-## Build
+## Construido con 🛠️
+_las herramientas utilizadas para la creacion del proyecto son
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+* [Angular](https://angular.io/) - El framework web usado
+* [Docker](https://www.docker.com/) 
+* [bootstrap](https://getbootstrap.com/) - Usado para estilos
+* [fontawesome](https://fontawesome.com/) - Usado para estilos de botones
 
-## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
+## Autores ✒️
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
-## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+* **Edvard Frederick Bareño** - *Trabajo Total* - [FrederickUdis](https://github.com/FrederickUdis)
+
+ 
+
+
+
+## Expresiones de Gratitud 🎁
+
+* Gracias a la oficina asesora de sistemas por dar nuevos retos.
+
+
+
+
