@@ -1,12 +1,6 @@
-# Aplicacion Oas Futbol
+# Aplicacion de productos, personas y ordenes
 
-es una aplicacion capaz de agregar equipos con los siguientes atributos:
--Nombre del equipo
--Color de ropa
--Numero del equipo
--Numero de goles
--Puntos ganados
--Partido Asignado
+es una aplicacion capaz crear personas , productos y asociarlos a ordenes
 
 ## Comenzando 🚀
 
@@ -14,9 +8,9 @@ Para obtener una copia del proyecto solo es necesario clonar al git
 
 ### Pre-requisitos 📋
 
-Docker
-Angular
-FireBase
+Go
+Beego
+sqllite
 
 ## Construido con 🛠️
 _las herramientas utilizadas para la creacion del proyecto son
@@ -60,13 +54,14 @@ DELETE /productos/:id: Elimina un producto existente por su ID.
 
 Consumidores:
 
-
 POST /consumidores: Crea un nuevo consumidor.
+
 ![image](https://github.com/FrederickUdis/Prueba-Oas/assets/30853509/253a2f47-65d0-40eb-96bd-b3d99124b940)
 ![image](https://github.com/FrederickUdis/Prueba-Oas/assets/30853509/c03f3198-995c-4912-a43e-00f563086471)
 
 
 GET /consumidores: Obtiene la lista de consumidores existentes.
+
 ![image](https://github.com/FrederickUdis/Prueba-Oas/assets/30853509/04ed9465-34aa-4cec-ad71-a18bcf8501ae)
 
 Consumidor Individual:
@@ -80,20 +75,38 @@ POST /ordenes: Crea una nueva orden.
 ![image](https://github.com/FrederickUdis/Prueba-Oas/assets/30853509/c94c7d18-8d09-4903-8fb7-62447c5dfa5e)
 ![image](https://github.com/FrederickUdis/Prueba-Oas/assets/30853509/c1a57619-6aac-4adb-8dfb-71d48cae41f7)
 
-
 GET /ordenes: Obtiene la lista de órdenes existentes.
 ![image](https://github.com/FrederickUdis/Prueba-Oas/assets/30853509/5969a844-0151-40e3-93a4-ac36f9c59929)
 
-Orden Individual:
+# Esquema Base de datos
+Diseño de Base de Datos basado en Modelos
+Esquema Conceptual:
+1. Consumidor
+ID (Clave Primaria)
+Nombre
+Email (Único)
+2. Orden
+ID (Clave Primaria)
+Consumidor_ID (Clave Externa que referencia a Consumidor)
+Producto_ID (Clave Externa que referencia a Producto)
+Cantidad
+Total
+3. Producto
+ID (Clave Primaria)
+Descripcion
+Precio
+Stock
+Relaciones:
+Un Consumidor puede tener muchas Ordenes pero una Orden pertenece a un único Consumidor. Esto es una relación uno a muchos entre Consumidor y Orden.
 
-PUT /ordenes/:id: Actualiza una orden existente por su ID.
-DELETE /ordenes/:id: Elimina una orden existente por su ID.
+Un Producto puede estar en muchas Ordenes pero una Orden tiene un único Producto. Esto es una relación uno a muchos entre Producto y Orden.
+
 
 
 
 ## Expresiones de Gratitud 🎁
 
-* Gracias a la oficina asesora de sistemas por dar nuevos retos.
+* Un agradecimiento especial a la Oficina Asesora de Sistemas por presentar constantes desafíos y oportunidades de crecimiento.
 
 
 
